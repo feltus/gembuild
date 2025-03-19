@@ -4,6 +4,8 @@
 https://figshare.com/articles/dataset/Data_record_3/5330593
 
 #Merge GEMs from Wang et al
+
+```
 python mergegem.py bladderrsemfpkmgtex.txt blcarsemfpkmtcgat.txt BLAD_BLCA.txt
 python mergegem.py breastrsemfpkmgtex.txt brcarsemfpkmtcgat.txt BREA_BRCA.txt
 python mergegem.py cervixrsemfpkmgtex.txt cescrsemfpkmtcgat.txt CERV_CESC.txt
@@ -22,7 +24,7 @@ python mergegem.py thyroidrsemfpkmgtex.txt thcarsemfpkmtcgat.txt THYR_THCR.txt
 python mergegem.py uterusrsemfpkmgtex.txt ucecrsemfpkmtcgat.txt UTER_UCEC.txt
 python mergegem.py uterusrsemfpkmgtex.txt ucsrsemfpkmtcgat.txt UTER_UCSR.txt
 python mergegem.py stomachrsemfpkmgtex.txt stadrsemfpkmtcgat.txt STOM_STAD.txt
-
+```
 
 
 #Transpose the matrices/
