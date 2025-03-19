@@ -4,6 +4,7 @@
 https://figshare.com/articles/dataset/Data_record_3/5330593
 
 ## Here is a subset of Normal-GTEX and Tumor-TCGA GEM files and the merged label.: Normal-GTEX and Tumor-TCGA (TCGA normal is not included).
+```
 bladder-rsem-fpkm-gtex.txt	BLADN
 blca-rsem-fpkm-tcga-t.txt	BLCAT
 blca-rsem-fpkm-tcga.txt	BLCAN
@@ -132,7 +133,8 @@ cat UTERN_UCECT_train.txt | awk '{$1=$1}1' OFS='\t'  > UTERN_UCECT.train
 
 
 ## Make  group label files (e.g. TUMOR, NORMAL)
-```bash make_label.sh BLAD_BLCA.train; bash make_label.sh BLAD_BLCA.test"
+```
+bash make_label.sh BLAD_BLCA.train; bash make_label.sh BLAD_BLCA.test"
 bash gembuild/make_labels.sh BLADN_BLCAT.train; bash gembuild/make_labels.sh BLADN_BLCAT.test"
 bash gembuild/make_labels.sh BREAN_BRCAT.train; bash gembuild/make_labels.sh BREAN_BRCAT.test"
 bash gembuild/make_labels.sh CERVN_CESCT.train; bash gembuild/make_labels.sh CERVN_CESCT.test"
