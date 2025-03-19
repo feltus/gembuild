@@ -115,20 +115,22 @@ bash gembuild/split_gem.sh UTERN_UCECT_transpose.txt UTERN_UCECT_train.txt UTERN
 
 ## Convert GEMS to tab-delimited format
 ```
-cat BLADN_BLCAT_train.txt | awk '{$1=$1}1' OFS='\t'  > BLADN_BLCAT.train
-cat BREAN_BRCAT_train.txt | awk '{$1=$1}1' OFS='\t'  > BREAN_BRCAT.train
-cat CERVN_CESCT_train.txt | awk '{$1=$1}1' OFS='\t'  > CERVN_CESCT.train
-cat COLON_COADT_train.txt | awk '{$1=$1}1' OFS='\t'  > COLON_COADT.train
-cat ESOGN_ESCAT_train.txt | awk '{$1=$1}1' OFS='\t'  > ESOGN_ESCAT.train
-cat KIDNN_KIRCT_train.txt | awk '{$1=$1}1' OFS='\t'  > KIDNN_KIRCT.train
-cat KIDNN_KIRPT_train.txt | awk '{$1=$1}1' OFS='\t'  > KIDNN_KIRPT.train
-cat LIVEN_LIHCT_train.txt | awk '{$1=$1}1' OFS='\t'  > LIVEN_LIHCT.train
-cat PROSN_PRADT_train.txt | awk '{$1=$1}1' OFS='\t'  > PROSN_PRADT.train
-cat STOMN_STADT_train.txt | awk '{$1=$1}1' OFS='\t'  > STOMN_STADT.train
-cat THYRN_THCAT_train.txt | awk '{$1=$1}1' OFS='\t'  > THYRN_THCAT.train
-cat LUNGN_LUADT_train.txt | awk '{$1=$1}1' OFS='\t'  > LUNGN_LUADT.train
-cat LUNGN_LUSCT_train.txt | awk '{$1=$1}1' OFS='\t'  > LUNGN_LUSCT.train
-cat UTERN_UCECT_train.txt | awk '{$1=$1}1' OFS='\t'  > UTERN_UCECT.train
+cat BLADN_BLCAT_train.txt | awk '{$1=$1}1' OFS='\t'  > BLADN_BLCAT.train; cat BLADN_BLCAT_test.txt | awk '{$1=$1}1' OFS='\t'  > BLADN_BLCAT.test
+cat BREAN_BRCAT_train.txt | awk '{$1=$1}1' OFS='\t'  > BREAN_BRCAT.train; cat BREAN_BRCAT_test.txt | awk '{$1=$1}1' OFS='\t'  > BREAN_BRCAT.test
+cat CERVN_CESCT_train.txt | awk '{$1=$1}1' OFS='\t'  > CERVN_CESCT.train; cat CERVN_CESCT_test.txt | awk '{$1=$1}1' OFS='\t'  > CERVN_CESCT.test
+cat COLON_COADT_train.txt | awk '{$1=$1}1' OFS='\t'  > COLON_COADT.train; cat COLON_COADT_test.txt | awk '{$1=$1}1' OFS='\t'  > COLON_COADT.test
+cat ESOGN_ESCAT_train.txt | awk '{$1=$1}1' OFS='\t'  > ESOGN_ESCAT.train; cat ESOGN_ESCAT_test.txt | awk '{$1=$1}1' OFS='\t'  > ESOGN_ESCAT.test
+cat KIDNN_KIRCT_train.txt | awk '{$1=$1}1' OFS='\t'  > KIDNN_KIRCT.train; cat KIDNN_KIRCT_test.txt | awk '{$1=$1}1' OFS='\t'  > KIDNN_KIRCT.test
+cat KIDNN_KIRPT_train.txt | awk '{$1=$1}1' OFS='\t'  > KIDNN_KIRPT.train; cat KIDNN_KIRPT_test.txt | awk '{$1=$1}1' OFS='\t'  > KIDNN_KIRPT.test
+cat LIVEN_LIHCT_train.txt | awk '{$1=$1}1' OFS='\t'  > LIVEN_LIHCT.train; cat LIVEN_LIHCT_test.txt | awk '{$1=$1}1' OFS='\t'  > LIVEN_LIHCT.test
+cat PROSN_PRADT_train.txt | awk '{$1=$1}1' OFS='\t'  > PROSN_PRADT.train; cat PROSN_PRADT_test.txt | awk '{$1=$1}1' OFS='\t'  > PROSN_PRADT.test
+cat STOMN_STADT_train.txt | awk '{$1=$1}1' OFS='\t'  > STOMN_STADT.train; cat STOMN_STADT_test.txt | awk '{$1=$1}1' OFS='\t'  > STOMN_STADT.test
+cat THYRN_THCAT_train.txt | awk '{$1=$1}1' OFS='\t'  > THYRN_THCAT.train; cat THYRN_THCAT_test.txt | awk '{$1=$1}1' OFS='\t'  > THYRN_THCAT.test
+cat LUNGN_LUADT_train.txt | awk '{$1=$1}1' OFS='\t'  > LUNGN_LUADT.train; cat LUNGN_LUADT_test.txt | awk '{$1=$1}1' OFS='\t'  > LUNGN_LUADT.test
+cat LUNGN_LUSCT_train.txt | awk '{$1=$1}1' OFS='\t'  > LUNGN_LUSCT.train; cat LUNGN_LUSCT_test.txt | awk '{$1=$1}1' OFS='\t'  > LUNGN_LUSCT.test
+cat UTERN_UCECT_train.txt | awk '{$1=$1}1' OFS='\t'  > UTERN_UCECT.train; cat UTERN_UCECT_test.txt | awk '{$1=$1}1' OFS='\t'  > UTERN_UCECT.test
+![image](https://github.com/user-attachments/assets/72834459-7baf-495d-9838-d34f92174df7)
+
 ```
 
 
