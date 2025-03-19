@@ -97,20 +97,20 @@ bash gembuild/transpose_gem.sh UTERN_UCECT.txt > UTERN_UCECT_transpose.txt
 
 ## Split GEMs into test and train sets
 ```
-gembuild/split_gem.sh BLADN_BLCAT_transpose.txt BLADN_BLCAT_train.txt BLADN_BLCAT_test.txt
-gembuild/split_gem.sh BREAN_BRCAT_transpose.txt BREAN_BRCAT_train.txt BREAN_BRCAT_test.txt
-gembuild/split_gem.sh CERVN_CESCT_transpose.txt CERVN_CESCT_train.txt CERVN_CESCT_test.txt
-gembuild/split_gem.sh COLON_COADT_transpose.txt COLON_COADT_train.txt COLON_COADT_test.txt
-gembuild/split_gem.sh ESOGN_ESCAT_transpose.txt ESOGN_ESCAT_train.txt ESOGN_ESCAT_test.txt
-gembuild/split_gem.sh KIDNN_KIRCT_transpose.txt KIDNN_KIRCT_train.txt KIDNN_KIRCT_test.txt
-gembuild/split_gem.sh KIDNN_KIRPT_transpose.txt KIDNN_KIRPT_train.txt KIDNN_KIRPT_test.txt
-gembuild/split_gem.sh LIVEN_LIHCT_transpose.txt LIVEN_LIHCT_train.txt LIVEN_LIHCT_test.txt
-gembuild/split_gem.sh PROSN_PRADT_transpose.txt PROSN_PRADT_train.txt PROSN_PRADT_test.txt
-gembuild/split_gem.sh STOMN_STADT_transpose.txt STOMN_STADT_train.txt STOMN_STADT_test.txt
-gembuild/split_gem.sh THYRN_THCAT_transpose.txt THYRN_THCAT_train.txt THYRN_THCAT_test.txt
-gembuild/split_gem.sh LUNGN_LUADT_transpose.txt LUNGN_LUADT_train.txt LUNGN_LUADT_test.txt
-gembuild/split_gem.sh LUNGN_LUSCT_transpose.txt LUNGN_LUSCT_train.txt LUNGN_LUSCT_test.txt
-gembuild/split_gem.sh UTERN_UCECT_transpose.txt UTERN_UCECT_train.txt UTERN_UCECT_test.txt
+bash gembuild/split_gem.sh BLADN_BLCAT_transpose.txt BLADN_BLCAT_train.txt BLADN_BLCAT_test.txt
+bash gembuild/split_gem.sh BREAN_BRCAT_transpose.txt BREAN_BRCAT_train.txt BREAN_BRCAT_test.txt
+bash gembuild/split_gem.sh CERVN_CESCT_transpose.txt CERVN_CESCT_train.txt CERVN_CESCT_test.txt
+bash gembuild/split_gem.sh COLON_COADT_transpose.txt COLON_COADT_train.txt COLON_COADT_test.txt
+bash gembuild/split_gem.sh ESOGN_ESCAT_transpose.txt ESOGN_ESCAT_train.txt ESOGN_ESCAT_test.txt
+bash gembuild/split_gem.sh KIDNN_KIRCT_transpose.txt KIDNN_KIRCT_train.txt KIDNN_KIRCT_test.txt
+bash gembuild/split_gem.sh KIDNN_KIRPT_transpose.txt KIDNN_KIRPT_train.txt KIDNN_KIRPT_test.txt
+bash gembuild/split_gem.sh LIVEN_LIHCT_transpose.txt LIVEN_LIHCT_train.txt LIVEN_LIHCT_test.txt
+bash gembuild/split_gem.sh PROSN_PRADT_transpose.txt PROSN_PRADT_train.txt PROSN_PRADT_test.txt
+bash gembuild/split_gem.sh STOMN_STADT_transpose.txt STOMN_STADT_train.txt STOMN_STADT_test.txt
+bash gembuild/split_gem.sh THYRN_THCAT_transpose.txt THYRN_THCAT_train.txt THYRN_THCAT_test.txt
+bash gembuild/split_gem.sh LUNGN_LUADT_transpose.txt LUNGN_LUADT_train.txt LUNGN_LUADT_test.txt
+bash gembuild/split_gem.sh LUNGN_LUSCT_transpose.txt LUNGN_LUSCT_train.txt LUNGN_LUSCT_test.txt
+bash gembuild/split_gem.sh UTERN_UCECT_transpose.txt UTERN_UCECT_train.txt UTERN_UCECT_test.txt
 ```
 
 ## Convert GEMS to tab-delimited format
