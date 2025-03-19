@@ -60,109 +60,93 @@ uterus-rsem-fpkm-gtex.txt	UTERN
 
 ## Merge GEMs from Wang et al
 ```
-python gem_merge.py bladder-rsem-fpkm-gtex.txt blca-rsem-fpkm-tcga-t.txt BLADN_BLCAT.txt
-python gem_merge.py breast-rsem-fpkm-gtex.txt brca-rsem-fpkm-tcga-t.txt BREAN_BRCAT.txt
-python gem_merge.py cervix-rsem-fpkm-gtex.txt cesc-rsem-fpkm-tcga-t.txt CERVN_CESCT.txt
-python gem_merge.py colon-rsem-fpkm-gtex.txt coad-rsem-fpkm-tcga-t.txt COLON_COADT.txt
-python gem_merge.py esophagus_gas-rsem-fpkm-gtex.txt esca-rsem-fpkm-tcga-t.txt ESOGN_ESCAT.txt
-python gem_merge.py kidney-rsem-fpkm-gtex.txt kirc-rsem-fpkm-tcga-t.txt KIDNN_KIRCT.txt
-python gem_merge.py kidney-rsem-fpkm-gtex.txt kirp-rsem-fpkm-tcga-t.txt KIDNN_KIRPT.txt
-python gem_merge.py liver-rsem-fpkm-gtex.txt lihc-rsem-fpkm-tcga-t.txt LIVEN_LIHCT.txt
-python gem_merge.py prostate-rsem-fpkm-gtex.txt prad-rsem-fpkm-tcga-t.txt PROSN_PRADT.txt
-python gem_merge.py stomach-rsem-fpkm-gtex.txt stad-rsem-fpkm-tcga-t.txt STOMN_STADT.txt
-python gem_merge.py thyroid-rsem-fpkm-gtex.txt thca-rsem-fpkm-tcga-t.txt THYRN_THCAT.txt
-python gem_merge.py lung-rsem-fpkm-gtex.txt luad-rsem-fpkm-tcga-t.txt LUNGN_LUADT.txt
-python gem_merge.py lung-rsem-fpkm-gtex.txt lusc-rsem-fpkm-tcga-t.txt LUNGN_LUSCT.txt
-python gem_merge.py uterus-rsem-fpkm-gtex.txt ucec-rsem-fpkm-tcga-t.txt UTERN_UCECT.txt
+python gembuild/gem_merge.py bladder-rsem-fpkm-gtex.txt blca-rsem-fpkm-tcga-t.txt BLADN_BLCAT.txt
+python gembuild/gem_merge.py breast-rsem-fpkm-gtex.txt brca-rsem-fpkm-tcga-t.txt BREAN_BRCAT.txt
+python gembuild/gem_merge.py cervix-rsem-fpkm-gtex.txt cesc-rsem-fpkm-tcga-t.txt CERVN_CESCT.txt
+python gembuild/gem_merge.py colon-rsem-fpkm-gtex.txt coad-rsem-fpkm-tcga-t.txt COLON_COADT.txt
+python gembuild/gem_merge.py esophagus_gas-rsem-fpkm-gtex.txt esca-rsem-fpkm-tcga-t.txt ESOGN_ESCAT.txt
+python gembuild/gem_merge.py kidney-rsem-fpkm-gtex.txt kirc-rsem-fpkm-tcga-t.txt KIDNN_KIRCT.txt
+python gembuild/gem_merge.py kidney-rsem-fpkm-gtex.txt kirp-rsem-fpkm-tcga-t.txt KIDNN_KIRPT.txt
+python gembuild/gem_merge.py liver-rsem-fpkm-gtex.txt lihc-rsem-fpkm-tcga-t.txt LIVEN_LIHCT.txt
+python gembuild/gem_merge.py prostate-rsem-fpkm-gtex.txt prad-rsem-fpkm-tcga-t.txt PROSN_PRADT.txt
+python gembuild/gem_merge.py stomach-rsem-fpkm-gtex.txt stad-rsem-fpkm-tcga-t.txt STOMN_STADT.txt
+python gembuild/gem_merge.py thyroid-rsem-fpkm-gtex.txt thca-rsem-fpkm-tcga-t.txt THYRN_THCAT.txt
+python gembuild/gem_merge.py lung-rsem-fpkm-gtex.txt luad-rsem-fpkm-tcga-t.txt LUNGN_LUADT.txt
+python gembuild/gem_merge.py lung-rsem-fpkm-gtex.txt lusc-rsem-fpkm-tcga-t.txt LUNGN_LUSCT.txt
+python gembuild/gem_merge.py uterus-rsem-fpkm-gtex.txt ucec-rsem-fpkm-tcga-t.txt UTERN_UCECT.txt
 ```
 
 ## Transpose the GEMs
 ```
-bash transpose_gem.sh BLAD_BLCA.txt > BLAD_BLCA_transpose.txt
-bash transpose_gem.sh BREA_BRCA.txt > BREA_BRCA_transpose.txt
-bash transpose_gem.sh CERV_CESC.txt > CERV_CESC_transpose.txt
-bash transpose_gem.sh COLO_COAD.txt > COLO_COAD_transpose.txt
-bash transpose_gem.sh GASR_ESCA.txt > GASR_ESCA_transpose.txt
-bash transpose_gem.sh MUCR_ESCA.txt > MUCR_ESCA_transpose.txt
-bash transpose_gem.sh MUSR_ESCA.txt > MUSR_ESCA_transpose.txt
-bash transpose_gem.sh KIDN_KIRC.txt > KIDN_KIRC_transpose.txt
-bash transpose_gem.sh KIDN_KIRP.txt > KIDN_KIRP_transpose.txt
-bash transpose_gem.sh KIDN_KICH.txt > KIDN_KICH_transpose.txt
-bash transpose_gem.sh LIVE_LIHC.txt > LIVE_LIHC_transpose.txt
-bash transpose_gem.sh LUNG_LUAD.txt > LUNG_LUAD_transpose.txt
-bash transpose_gem.sh LUNG_LUSC.txt > LUNG_LUSC_transpose.txt
-bash transpose_gem.sh PROS_PRAD.txt > PROS_PRAD_transpose.txt
-bash transpose_gem.sh THYR_THCR.txt > THYR_THCR_transpose.txt
-bash transpose_gem.sh UTER_UCEC.txt > UTER_UCEC_transpose.txt
-bash transpose_gem.sh UTER_UCSR.txt > UTER_UCSR_transpose.txt
-bash transpose_gem.sh STOM_STAD.txt > STOM_STAD_transpose.txt
+bash gembuild/transpose_gem.sh BLADN_BLCAT.txt > BLADN_BLCAT_transpose.txt
+bash gembuild/transpose_gem.sh BREAN_BRCAT.txt > BREAN_BRCAT_transpose.txt
+bash gembuild/transpose_gem.sh CERVN_CESCT.txt > CERVN_CESCT_transpose.txt
+bash gembuild/transpose_gem.sh COLON_COADT.txt > COLON_COADT_transpose.txt
+bash gembuild/transpose_gem.sh ESOGN_ESCAT.txt > ESOGN_ESCAT_transpose.txt
+bash gembuild/transpose_gem.sh KIDNN_KIRCT.txt > KIDNN_KIRCT_transpose.txt
+bash gembuild/transpose_gem.sh KIDNN_KIRPT.txt > KIDNN_KIRPT_transpose.txt
+bash gembuild/transpose_gem.sh LIVEN_LIHCT.txt > LIVEN_LIHCT_transpose.txt
+bash gembuild/transpose_gem.sh PROSN_PRADT.txt > PROSN_PRADT_transpose.txt
+bash gembuild/transpose_gem.sh STOMN_STADT.txt > STOMN_STADT_transpose.txt
+bash gembuild/transpose_gem.sh THYRN_THCAT.txt > THYRN_THCAT_transpose.txt
+bash gembuild/transpose_gem.sh LUNGN_LUADT.txt > LUNGN_LUADT_transpose.txt
+bash gembuild/transpose_gem.sh LUNGN_LUSCT.txt > LUNGN_LUSCT_transpose.txt
+bash gembuild/transpose_gem.sh UTERN_UCECT.txt > UTERN_UCECT_transpose.txt
 ```
 
 ## Split GEMs into test and train sets
 ```
-split_gem.sh BLAD_BLCA_transpose.txt BLAD_BLCA_train.txt BLAD_BLCA_test.txt
-split_gem.sh BREA_BRCA_transpose.txt BREA_BRCA_train.txt BREA_BRCA_test.txt
-split_gem.sh CERV_CESC_transpose.txt CERV_CESC_train.txt CERV_CESC_test.txt
-split_gem.sh COLO_COAD_transpose.txt COLO_COAD_train.txt COLO_COAD_test.txt
-split_gem.sh GASR_ESCA_transpose.txt GASR_ESCA_train.txt GASR_ESCA_test.txt
-split_gem.sh MUCR_ESCA_transpose.txt MUCR_ESCA_train.txt MUCR_ESCA_test.txt
-split_gem.sh MUSR_ESCA_transpose.txt MUSR_ESCA_train.txt MUSR_ESCA_test.txt
-split_gem.sh KIDN_KIRC_transpose.txt KIDN_KIRC_train.txt KIDN_KIRC_test.txt
-split_gem.sh KIDN_KIRP_transpose.txt KIDN_KIRP_train.txt KIDN_KIRP_test.txt
-split_gem.sh KIDN_KICH_transpose.txt KIDN_KICH_train.txt KIDN_KICH_test.txt
-split_gem.sh LIVE_LIHC_transpose.txt LIVE_LIHC_train.txt LIVE_LIHC_test.txt
-split_gem.sh LUNG_LUAD_transpose.txt LUNG_LUAD_train.txt LUNG_LUAD_test.txt
-split_gem.sh LUNG_LUSC_transpose.txt LUNG_LUSC_train.txt LUNG_LUSC_test.txt
-split_gem.sh PROS_PRAD_transpose.txt PROS_PRAD_train.txt PROS_PRAD_test.txt
-split_gem.sh THYR_THCR_transpose.txt THYR_THCR_train.txt THYR_THCR_test.txt
-split_gem.sh UTER_UCEC_transpose.txt UTER_UCEC_train.txt UTER_UCEC_test.txt
-split_gem.sh UTER_UCSR_transpose.txt UTER_UCSR_train.txt UTER_UCSR_test.txt
-split_gem.sh STOM_STAD_transpose.txt STOM_STAD_train.txt STOM_STAD_test.txt
+gembuild/split_gem.sh BLADN_BLCAT_transpose.txt BLADN_BLCAT_train.txt BLADN_BLCAT_test.txt
+gembuild/split_gem.sh BREAN_BRCAT_transpose.txt BREAN_BRCAT_train.txt BREAN_BRCAT_test.txt
+gembuild/split_gem.sh CERVN_CESCT_transpose.txt CERVN_CESCT_train.txt CERVN_CESCT_test.txt
+gembuild/split_gem.sh COLON_COADT_transpose.txt COLON_COADT_train.txt COLON_COADT_test.txt
+gembuild/split_gem.sh ESOGN_ESCAT_transpose.txt ESOGN_ESCAT_train.txt ESOGN_ESCAT_test.txt
+gembuild/split_gem.sh KIDNN_KIRCT_transpose.txt KIDNN_KIRCT_train.txt KIDNN_KIRCT_test.txt
+gembuild/split_gem.sh KIDNN_KIRPT_transpose.txt KIDNN_KIRPT_train.txt KIDNN_KIRPT_test.txt
+gembuild/split_gem.sh LIVEN_LIHCT_transpose.txt LIVEN_LIHCT_train.txt LIVEN_LIHCT_test.txt
+gembuild/split_gem.sh PROSN_PRADT_transpose.txt PROSN_PRADT_train.txt PROSN_PRADT_test.txt
+gembuild/split_gem.sh STOMN_STADT_transpose.txt STOMN_STADT_train.txt STOMN_STADT_test.txt
+gembuild/split_gem.sh THYRN_THCAT_transpose.txt THYRN_THCAT_train.txt THYRN_THCAT_test.txt
+gembuild/split_gem.sh LUNGN_LUADT_transpose.txt LUNGN_LUADT_train.txt LUNGN_LUADT_test.txt
+gembuild/split_gem.sh LUNGN_LUSCT_transpose.txt LUNGN_LUSCT_train.txt LUNGN_LUSCT_test.txt
+gembuild/split_gem.sh UTERN_UCECT_transpose.txt UTERN_UCECT_train.txt UTERN_UCECT_test.txt
 ```
 
 ## Convert GEMS to tab-delimited format
 ```
-cat BLAD_BLCA_train.txt | awk '{$1=$1}1' OFS='\t'  > BLAD_BLCA.train
-cat BREA_BRCA_train.txt | awk '{$1=$1}1' OFS='\t'  > BREA_BRCA.train
-cat CERV_CESC_train.txt | awk '{$1=$1}1' OFS='\t'  > CERV_CESC.train
-cat COLO_COAD_train.txt | awk '{$1=$1}1' OFS='\t'  > COLO_COAD.train
-cat GASR_ESCA_train.txt | awk '{$1=$1}1' OFS='\t'  > GASR_ESCA.train
-cat MUCR_ESCA_train.txt | awk '{$1=$1}1' OFS='\t'  > MUCR_ESCA.train
-cat MUSR_ESCA_train.txt | awk '{$1=$1}1' OFS='\t'  > MUSR_ESCA.train
-cat KIDN_KIRC_train.txt | awk '{$1=$1}1' OFS='\t'  > KIDN_KIRC.train
-cat KIDN_KIRP_train.txt | awk '{$1=$1}1' OFS='\t'  > KIDN_KIRP.train
-cat KIDN_KICH_train.txt | awk '{$1=$1}1' OFS='\t'  > KIDN_KICH.train
-cat LIVE_LIHC_train.txt | awk '{$1=$1}1' OFS='\t'  > LIVE_LIHC.train
-cat LUNG_LUAD_train.txt | awk '{$1=$1}1' OFS='\t'  > LUNG_LUAD.train
-cat LUNG_LUSC_train.txt | awk '{$1=$1}1' OFS='\t'  > LUNG_LUSC.train
-cat PROS_PRAD_train.txt | awk '{$1=$1}1' OFS='\t'  > PROS_PRAD.train
-cat THYR_THCR_train.txt | awk '{$1=$1}1' OFS='\t'  > THYR_THCR.train
-cat UTER_UCEC_train.txt | awk '{$1=$1}1' OFS='\t'  > UTER_UCEC.train
-cat UTER_UCSR_train.txt | awk '{$1=$1}1' OFS='\t'  > UTER_UCSR.train
-cat STOM_STAD_train.txt | awk '{$1=$1}1' OFS='\t'  > STOM_STAD.train
+cat BLADN_BLCAT_train.txt | awk '{$1=$1}1' OFS='\t'  > BLADN_BLCAT.train
+cat BREAN_BRCAT_train.txt | awk '{$1=$1}1' OFS='\t'  > BREAN_BRCAT.train
+cat CERVN_CESCT_train.txt | awk '{$1=$1}1' OFS='\t'  > CERVN_CESCT.train
+cat COLON_COADT_train.txt | awk '{$1=$1}1' OFS='\t'  > COLON_COADT.train
+cat ESOGN_ESCAT_train.txt | awk '{$1=$1}1' OFS='\t'  > ESOGN_ESCAT.train
+cat KIDNN_KIRCT_train.txt | awk '{$1=$1}1' OFS='\t'  > KIDNN_KIRCT.train
+cat KIDNN_KIRPT_train.txt | awk '{$1=$1}1' OFS='\t'  > KIDNN_KIRPT.train
+cat LIVEN_LIHCT_train.txt | awk '{$1=$1}1' OFS='\t'  > LIVEN_LIHCT.train
+cat PROSN_PRADT_train.txt | awk '{$1=$1}1' OFS='\t'  > PROSN_PRADT.train
+cat STOMN_STADT_train.txt | awk '{$1=$1}1' OFS='\t'  > STOMN_STADT.train
+cat THYRN_THCAT_train.txt | awk '{$1=$1}1' OFS='\t'  > THYRN_THCAT.train
+cat LUNGN_LUADT_train.txt | awk '{$1=$1}1' OFS='\t'  > LUNGN_LUADT.train
+cat LUNGN_LUSCT_train.txt | awk '{$1=$1}1' OFS='\t'  > LUNGN_LUSCT.train
+cat UTERN_UCECT_train.txt | awk '{$1=$1}1' OFS='\t'  > UTERN_UCECT.train
 ```
 
 
 ## Make  group label files (e.g. TUMOR, NORMAL)
 ```bash make_label.sh BLAD_BLCA.train; bash make_label.sh BLAD_BLCA.test"
-bash make_labels.sh BLAD_BLCA.train; bash make_labels.sh BLAD_BLCA.test"
-bash make_labels.sh BREA_BRCA.train; bash make_labels.sh BREA_BRCA.test"
-bash make_labels.sh CERV_CESC.train; bash make_labels.sh CERV_CESC.test"
-bash make_labels.sh COLO_COAD.train; bash make_labels.sh COLO_COAD.test"
-bash make_labels.sh GASR_ESCA.train; bash make_labels.sh GASR_ESCA.test"
-bash make_labels.sh MUCR_ESCA.train; bash make_labels.sh MUCR_ESCA.test"
-bash make_labels.sh MUSR_ESCA.train; bash make_labels.sh MUSR_ESCA.test"
-bash make_labels.sh KIDN_KIRC.train; bash make_labels.sh KIDN_KIRC.test"
-bash make_labels.sh KIDN_KIRP.train; bash make_labels.sh KIDN_KIRP.test"
-bash make_labels.sh KIDN_KICH.train; bash make_labels.sh KIDN_KICH.test"
-bash make_labels.sh LIVE_LIHC.train; bash make_labels.sh LIVE_LIHC.test"
-bash make_labels.sh LUNG_LUAD.train; bash make_labels.sh LUNG_LUAD.test"
-bash make_labels.sh LUNG_LUSC.train; bash make_labels.sh LUNG_LUSC.test"
-bash make_labels.sh PROS_PRAD.train; bash make_labels.sh PROS_PRAD.test"
-bash make_labels.sh THYR_THCR.train; bash make_labels.sh THYR_THCR.test"
-bash make_labels.sh UTER_UCEC.train; bash make_labels.sh UTER_UCEC.test"
-bash make_labels.sh UTER_UCSR.train; bash make_labels.sh UTER_UCSR.test"
-bash make_labels.sh STOM_STAD.train; bash make_labels.sh STOM_STAD.test"
+bash gembuild/make_labels.sh BLADN_BLCAT.train; bash gembuild/make_labels.sh BLADN_BLCAT.test"
+bash gembuild/make_labels.sh BREAN_BRCAT.train; bash gembuild/make_labels.sh BREAN_BRCAT.test"
+bash gembuild/make_labels.sh CERVN_CESCT.train; bash gembuild/make_labels.sh CERVN_CESCT.test"
+bash gembuild/make_labels.sh COLON_COADT.train; bash gembuild/make_labels.sh COLON_COADT.test"
+bash gembuild/make_labels.sh ESOGN_ESCAT.train; bash gembuild/make_labels.sh ESOGN_ESCAT.test"
+bash gembuild/make_labels.sh KIDNN_KIRCT.train; bash gembuild/make_labels.sh KIDNN_KIRCT.test"
+bash gembuild/make_labels.sh KIDNN_KIRPT.train; bash gembuild/make_labels.sh KIDNN_KIRPT.test"
+bash gembuild/make_labels.sh LIVEN_LIHCT.train; bash gembuild/make_labels.sh LIVEN_LIHCT.test"
+bash gembuild/make_labels.sh PROSN_PRADT.train; bash gembuild/make_labels.sh PROSN_PRADT.test"
+bash gembuild/make_labels.sh STOMN_STADT.train; bash gembuild/make_labels.sh STOMN_STADT.test"
+bash gembuild/make_labels.sh THYRN_THCAT.train; bash gembuild/make_labels.sh THYRN_THCAT.test"
+bash gembuild/make_labels.sh LUNGN_LUADT.train; bash gembuild/make_labels.sh LUNGN_LUADT.test"
+bash gembuild/make_labels.sh LUNGN_LUSCT.train; bash gembuild/make_labels.sh LUNGN_LUSCT.test"
+bash gembuild/make_labels.sh UTERN_UCECT.train; bash gembuild/make_labels.sh UTERN_UCECT.test"
 ```
 
 ## Draw a histogram of all GEMs
