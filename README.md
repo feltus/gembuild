@@ -129,14 +129,11 @@ cat THYRN_THCAT_train.txt | awk '{$1=$1}1' OFS='\t'  > THYRN_THCAT.train; cat TH
 cat LUNGN_LUADT_train.txt | awk '{$1=$1}1' OFS='\t'  > LUNGN_LUADT.train; cat LUNGN_LUADT_test.txt | awk '{$1=$1}1' OFS='\t'  > LUNGN_LUADT.test
 cat LUNGN_LUSCT_train.txt | awk '{$1=$1}1' OFS='\t'  > LUNGN_LUSCT.train; cat LUNGN_LUSCT_test.txt | awk '{$1=$1}1' OFS='\t'  > LUNGN_LUSCT.test
 cat UTERN_UCECT_train.txt | awk '{$1=$1}1' OFS='\t'  > UTERN_UCECT.train; cat UTERN_UCECT_test.txt | awk '{$1=$1}1' OFS='\t'  > UTERN_UCECT.test
-![image](https://github.com/user-attachments/assets/72834459-7baf-495d-9838-d34f92174df7)
-
 ```
 
 
 ## Make  group label files (e.g. TUMOR, NORMAL)
 ```
-bash make_label.sh BLAD_BLCA.train; bash make_label.sh BLAD_BLCA.test"
 bash gembuild/make_labels.sh BLADN_BLCAT.train; bash gembuild/make_labels.sh BLADN_BLCAT.test"
 bash gembuild/make_labels.sh BREAN_BRCAT.train; bash gembuild/make_labels.sh BREAN_BRCAT.test"
 bash gembuild/make_labels.sh CERVN_CESCT.train; bash gembuild/make_labels.sh CERVN_CESCT.test"
