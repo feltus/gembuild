@@ -3,6 +3,29 @@
 #Download GEMs
 https://figshare.com/articles/dataset/Data_record_3/5330593
 
+```
+#Here is a subset of GEMS: Normal-GTEX and Tumor-TCGA (TCGA normal is not included).
+GEMA	GEMB	GEM_MERGE
+bladderrsemfpkmgtex.txt	blcarsemfpkmtcgat.txt	BLAD_BLCA
+breastrsemfpkmgtex.txt	brcarsemfpkmtcgat.txt	BREA_BRCA
+cervixrsemfpkmgtex.txt	cescrsemfpkmtcgat.txt	CERV_CESC
+colonrsemfpkmgtex.txt	coadrsemfpkmtcgat.txt	COLO_COAD
+esophagus_gasrsemfpkmgtex.txt	escarsemfpkmtcgat.txt	GASR_ESCA
+esophagus_mucrsemfpkmgtex.txt	escarsemfpkmtcgat.txt	MUCR_ESCA
+esophagus_musrsemfpkmgtex.txt	escarsemfpkmtcgat.txt	MUSR_ESCA
+kidneyrsemfpkmgtex.txt	kircrsemfpkmtcgat.txt	KIDN_KIRC
+kidneyrsemfpkmgtex.txt	kirprsemfpkmtcgat.txt	KIDN_KIRP
+kidneyrsemfpkmgtex.txt	kichrsemfpkmtcgat.txt	KIDN_KICH
+liverrsemfpkmgtex.txt	lihcrsemfpkmtcgat.txt	LIVE_LIHC
+lungrsemfpkmgtex.txt	luadrsemfpkmtcgat.txt	LUNG_LUAD
+lungrsemfpkmgtex.txt	luscrsemfpkmtcgat.txt	LUNG_LUSC
+prostatersemfpkmgtex.txt	pradrsemfpkmtcgat.txt	PROS_PRAD
+thyroidrsemfpkmgtex.txt	thcarsemfpkmtcgat.txt	THYR_THCR
+uterusrsemfpkmgtex.txt	ucecrsemfpkmtcgat.txt	UTER_UCEC
+uterusrsemfpkmgtex.txt	ucsrsemfpkmtcgat.txt	UTER_UCSR
+stomachrsemfpkmgtex.txt	stadrsemfpkmtcgat.txt	STOM_STAD
+```
+
 #Merge GEMs from Wang et al
 
 ```
@@ -26,30 +49,52 @@ python mergegem.py uterusrsemfpkmgtex.txt ucsrsemfpkmtcgat.txt UTER_UCSR.txt
 python mergegem.py stomachrsemfpkmgtex.txt stadrsemfpkmtcgat.txt STOM_STAD.txt
 ```
 
-
-#Transpose the matrices/
+#Transpose the GEMs
+```
+bash transpose.sh BLAD_BLCA.txt > BLAD_BLCA_transpose.txt
+bash transpose.sh BREA_BRCA.txt > BREA_BRCA_transpose.txt
+bash transpose.sh CERV_CESC.txt > CERV_CESC_transpose.txt
 bash transpose.sh COLO_COAD.txt > COLO_COAD_transpose.txt
-bash transpose.sh ESOP_ESCA.txt> ESOP_ESCA_transpose.txt
-bash transpose.sh KIDN_KIRC.txt> KIDN_KIRC_transpose.txt
-bash transpose.sh KIDN_KIRP.txt> KIDN_KIRP_transpose.txt
-bash transpose.sh BRES_BRCA.txt > BRES_BRCA_transpose.txt
-
-
-bash ../PREPROCESS/transpose.sh LIVE_LIHC.txt> LIVE_LIHC_transpose.txt
-
-
-# head BLAD_BLCA_train.txt | awk '{print $1,$2,$3}';  head COLO_COAD_transpose.txt | awk '{print $1,$2,$3}'
-
+bash transpose.sh GASR_ESCA.txt > GASR_ESCA_transpose.txt
+bash transpose.sh MUCR_ESCA.txt > MUCR_ESCA_transpose.txt
+bash transpose.sh MUSR_ESCA.txt > MUSR_ESCA_transpose.txt
+bash transpose.sh KIDN_KIRC.txt > KIDN_KIRC_transpose.txt
+bash transpose.sh KIDN_KIRP.txt > KIDN_KIRP_transpose.txt
+bash transpose.sh KIDN_KICH.txt > KIDN_KICH_transpose.txt
+bash transpose.sh LIVE_LIHC.txt > LIVE_LIHC_transpose.txt
+bash transpose.sh LUNG_LUAD.txt > LUNG_LUAD_transpose.txt
+bash transpose.sh LUNG_LUSC.txt > LUNG_LUSC_transpose.txt
+bash transpose.sh PROS_PRAD.txt > PROS_PRAD_transpose.txt
+bash transpose.sh THYR_THCR.txt > THYR_THCR_transpose.txt
+bash transpose.sh UTER_UCEC.txt > UTER_UCEC_transpose.txt
+bash transpose.sh UTER_UCSR.txt > UTER_UCSR_transpose.txt
+bash transpose.sh STOM_STAD.txt > STOM_STAD_transpose.txt
+```
 
 #Split GEMs into test and train sets
-bash split_gem.sh COLO_COAD_transpose.txt COLO_COAD_train.txt COLO_COAD_test.txt
-bash split_gem.sh ESOP_ESCA_transpose.txt ESOP_ESCA_train.txt ESOP_ESCA_test.txt
-bash ../PREPROCESS/split_gem.sh KIDN_KIRC_transpose.txt KIDN_KIRC_train.txt KIDN_KIRC_test.txt
-bash ../PREPROCESS/split_gem.sh KIDN_KIRP_transpose.txt KIDN_KIRP_train.txt KIDN_KIRP_test.txt
-bash ../PREPROCESS/split_gem.sh LIVE_LIHC_transpose.txt KIDN_KIRP_train.txt LIVE_LIHC_test.txt
+```
+split_gem.sh BLAD_BLCA_transpose.txt BLAD_BLCA_train.txt BLAD_BLCA_test.txt
+split_gem.sh BREA_BRCA_transpose.txt BREA_BRCA_train.txt BREA_BRCA_test.txt
+split_gem.sh CERV_CESC_transpose.txt CERV_CESC_train.txt CERV_CESC_test.txt
+split_gem.sh COLO_COAD_transpose.txt COLO_COAD_train.txt COLO_COAD_test.txt
+split_gem.sh GASR_ESCA_transpose.txt GASR_ESCA_train.txt GASR_ESCA_test.txt
+split_gem.sh MUCR_ESCA_transpose.txt MUCR_ESCA_train.txt MUCR_ESCA_test.txt
+split_gem.sh MUSR_ESCA_transpose.txt MUSR_ESCA_train.txt MUSR_ESCA_test.txt
+split_gem.sh KIDN_KIRC_transpose.txt KIDN_KIRC_train.txt KIDN_KIRC_test.txt
+split_gem.sh KIDN_KIRP_transpose.txt KIDN_KIRP_train.txt KIDN_KIRP_test.txt
+split_gem.sh KIDN_KICH_transpose.txt KIDN_KICH_train.txt KIDN_KICH_test.txt
+split_gem.sh LIVE_LIHC_transpose.txt LIVE_LIHC_train.txt LIVE_LIHC_test.txt
+split_gem.sh LUNG_LUAD_transpose.txt LUNG_LUAD_train.txt LUNG_LUAD_test.txt
+split_gem.sh LUNG_LUSC_transpose.txt LUNG_LUSC_train.txt LUNG_LUSC_test.txt
+split_gem.sh PROS_PRAD_transpose.txt PROS_PRAD_train.txt PROS_PRAD_test.txt
+split_gem.sh THYR_THCR_transpose.txt THYR_THCR_train.txt THYR_THCR_test.txt
+split_gem.sh UTER_UCEC_transpose.txt UTER_UCEC_train.txt UTER_UCEC_test.txt
+split_gem.sh UTER_UCSR_transpose.txt UTER_UCSR_train.txt UTER_UCSR_test.txt
+split_gem.sh STOM_STAD_transpose.txt STOM_STAD_train.txt STOM_STAD_test.txt
+```
 
-
-#Convert to tab-delimited and get rid of HUGO_SYMBOL
+#Convert to tab-delimited format
+```
 cat COLO_COAD_train.txt | awk '{$1=$1}1' OFS='\t'  > COLO_COAD.train
 cat COLO_COAD_test.txt | awk '{$1=$1}1' OFS='\t'  > COLO_COAD.test
 cat ESOP_ESCA_train.txt | awk '{$1=$1}1' OFS='\t'  > ESOP_ESCA.train
@@ -58,7 +103,7 @@ cat KIDN_KIRC_train.txt | awk '{$1=$1}1' OFS='\t'  > KIDN_KIRC.train
 cat KIDN_KIRC_test.txt | awk '{$1=$1}1' OFS='\t'  > KIDN_KIRC.test
 cat KIDN_KIRP_train.txt | awk '{$1=$1}1' OFS='\t'  > KIDN_KIRP.train
 cat KIDN_KIRP_test.txt | awk '{$1=$1}1' OFS='\t'  > KIDN_KIRP.test
-
+```
 
 cat LIVE_LIHC_test.txt | awk '{$1=$1}1' OFS='\t'  > LIVE_LIHC.test
 cat LIVE_LIHC_train.txt | awk '{$1=$1}1' OFS='\t'  > LIVE_LIHC.train
