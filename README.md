@@ -3,7 +3,6 @@
 ## Download GEMs
 https://figshare.com/articles/dataset/Data_record_3/5330593
 
-```
 ## Here is a subset of GEMS: Normal-GTEX and Tumor-TCGA (TCGA normal is not included).
 GEMA	GEMB	GEM_MERGE
 bladderrsemfpkmgtex.txt	blcarsemfpkmtcgat.txt	BLAD_BLCA
@@ -24,7 +23,6 @@ thyroidrsemfpkmgtex.txt	thcarsemfpkmtcgat.txt	THYR_THCR
 uterusrsemfpkmgtex.txt	ucecrsemfpkmtcgat.txt	UTER_UCEC
 uterusrsemfpkmgtex.txt	ucsrsemfpkmtcgat.txt	UTER_UCSR
 stomachrsemfpkmgtex.txt	stadrsemfpkmtcgat.txt	STOM_STAD
-```
 
 ## Merge GEMs from Wang et al
 ```
@@ -70,7 +68,7 @@ bash transpose_gem.sh UTER_UCSR.txt > UTER_UCSR_transpose.txt
 bash transpose_gem.sh STOM_STAD.txt > STOM_STAD_transpose.txt
 ```
 
-#Split GEMs into test and train sets
+## Split GEMs into test and train sets
 ```
 split_gem.sh BLAD_BLCA_transpose.txt BLAD_BLCA_train.txt BLAD_BLCA_test.txt
 split_gem.sh BREA_BRCA_transpose.txt BREA_BRCA_train.txt BREA_BRCA_test.txt
@@ -92,32 +90,52 @@ split_gem.sh UTER_UCSR_transpose.txt UTER_UCSR_train.txt UTER_UCSR_test.txt
 split_gem.sh STOM_STAD_transpose.txt STOM_STAD_train.txt STOM_STAD_test.txt
 ```
 
-#Convert to tab-delimited format
+## Convert GEMS to tab-delimited format
 ```
+cat BLAD_BLCA_train.txt | awk '{$1=$1}1' OFS='\t'  > BLAD_BLCA.train
+cat BREA_BRCA_train.txt | awk '{$1=$1}1' OFS='\t'  > BREA_BRCA.train
+cat CERV_CESC_train.txt | awk '{$1=$1}1' OFS='\t'  > CERV_CESC.train
 cat COLO_COAD_train.txt | awk '{$1=$1}1' OFS='\t'  > COLO_COAD.train
-cat COLO_COAD_test.txt | awk '{$1=$1}1' OFS='\t'  > COLO_COAD.test
-cat ESOP_ESCA_train.txt | awk '{$1=$1}1' OFS='\t'  > ESOP_ESCA.train
-cat ESOP_ESCA_test.txt | awk '{$1=$1}1' OFS='\t'  > ESOP_ESCA.test
+cat GASR_ESCA_train.txt | awk '{$1=$1}1' OFS='\t'  > GASR_ESCA.train
+cat MUCR_ESCA_train.txt | awk '{$1=$1}1' OFS='\t'  > MUCR_ESCA.train
+cat MUSR_ESCA_train.txt | awk '{$1=$1}1' OFS='\t'  > MUSR_ESCA.train
 cat KIDN_KIRC_train.txt | awk '{$1=$1}1' OFS='\t'  > KIDN_KIRC.train
-cat KIDN_KIRC_test.txt | awk '{$1=$1}1' OFS='\t'  > KIDN_KIRC.test
 cat KIDN_KIRP_train.txt | awk '{$1=$1}1' OFS='\t'  > KIDN_KIRP.train
-cat KIDN_KIRP_test.txt | awk '{$1=$1}1' OFS='\t'  > KIDN_KIRP.test
+cat KIDN_KICH_train.txt | awk '{$1=$1}1' OFS='\t'  > KIDN_KICH.train
+cat LIVE_LIHC_train.txt | awk '{$1=$1}1' OFS='\t'  > LIVE_LIHC.train
+cat LUNG_LUAD_train.txt | awk '{$1=$1}1' OFS='\t'  > LUNG_LUAD.train
+cat LUNG_LUSC_train.txt | awk '{$1=$1}1' OFS='\t'  > LUNG_LUSC.train
+cat PROS_PRAD_train.txt | awk '{$1=$1}1' OFS='\t'  > PROS_PRAD.train
+cat THYR_THCR_train.txt | awk '{$1=$1}1' OFS='\t'  > THYR_THCR.train
+cat UTER_UCEC_train.txt | awk '{$1=$1}1' OFS='\t'  > UTER_UCEC.train
+cat UTER_UCSR_train.txt | awk '{$1=$1}1' OFS='\t'  > UTER_UCSR.train
+cat STOM_STAD_train.txt | awk '{$1=$1}1' OFS='\t'  > STOM_STAD.train
 ```
 
-cat LIVE_LIHC_test.txt | awk '{$1=$1}1' OFS='\t'  > LIVE_LIHC.test
-cat LIVE_LIHC_train.txt | awk '{$1=$1}1' OFS='\t'  > LIVE_LIHC.train
 
+## Make  group label files (e.g. TUMOR, NORMAL)
+```bash make_label.sh BLAD_BLCA.train; bash make_label.sh BLAD_BLCA.test"
+bash make_label.sh BREA_BRCA.train; bash make_label.sh BREA_BRCA.test"
+bash make_label.sh CERV_CESC.train; bash make_label.sh CERV_CESC.test"
+bash make_label.sh COLO_COAD.train; bash make_label.sh COLO_COAD.test"
+bash make_label.sh GASR_ESCA.train; bash make_label.sh GASR_ESCA.test"
+bash make_label.sh MUCR_ESCA.train; bash make_label.sh MUCR_ESCA.test"
+bash make_label.sh MUSR_ESCA.train; bash make_label.sh MUSR_ESCA.test"
+bash make_label.sh KIDN_KIRC.train; bash make_label.sh KIDN_KIRC.test"
+bash make_label.sh KIDN_KIRP.train; bash make_label.sh KIDN_KIRP.test"
+bash make_label.sh KIDN_KICH.train; bash make_label.sh KIDN_KICH.test"
+bash make_label.sh LIVE_LIHC.train; bash make_label.sh LIVE_LIHC.test"
+bash make_label.sh LUNG_LUAD.train; bash make_label.sh LUNG_LUAD.test"
+bash make_label.sh LUNG_LUSC.train; bash make_label.sh LUNG_LUSC.test"
+bash make_label.sh PROS_PRAD.train; bash make_label.sh PROS_PRAD.test"
+bash make_label.sh THYR_THCR.train; bash make_label.sh THYR_THCR.test"
+bash make_label.sh UTER_UCEC.train; bash make_label.sh UTER_UCEC.test"
+bash make_label.sh UTER_UCSR.train; bash make_label.sh UTER_UCSR.test"
+bash make_label.sh STOM_STAD.train; bash make_label.sh STOM_STAD.test"
+```
 
-#make label files
-bash make_label.sh COLO_COAD.train 
-bash make_label.sh COLO_COAD.test
-bash make_label.sh ESOP_ESCA.train 
-bash make_label.sh ESOP_ESCA.test
-bash ../PREPROCESS/make_label.sh KIDN_KIRC.train 
-bash ../PREPROCESS/make_label.sh KIDN_KIRC.test
-bash ../PREPROCESS/make_label.sh KIDN_KIRP.train
-bash ../PREPROCESS/make_label.sh KIDN_KIRP.test
-
-
-bash ../PREPROCESS/make_label.sh LIVE_LIHC.train
-bash ../PREPROCESS/make_label.sh  LIVE_LIHC.test
+## Draw a histogram of all GEMs
+```
+for i in *.train; do for k in *.txt; do python GEM_histogram.py -e $i -g $k -o $i.$k.png; done; done
+for i in *.test; do for k in *.txt; do python GEM_histogram.py -e $i -g $k -o $i.$k.png; done; done
+```
