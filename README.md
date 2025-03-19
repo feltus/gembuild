@@ -1,10 +1,10 @@
 # This Workflow will prepare a series of normal (GTEX) and tunor (TCGA) co-normalized gene expression matrices from Wang et al GEMs (https://pubmed.ncbi.nlm.nih.gov/29664468/).  GEMs will be mixed and separated into train and test GEMs for AI/ML applications.
 
-#Download GEMs
+## Download GEMs
 https://figshare.com/articles/dataset/Data_record_3/5330593
 
 ```
-#Here is a subset of GEMS: Normal-GTEX and Tumor-TCGA (TCGA normal is not included).
+## Here is a subset of GEMS: Normal-GTEX and Tumor-TCGA (TCGA normal is not included).
 GEMA	GEMB	GEM_MERGE
 bladderrsemfpkmgtex.txt	blcarsemfpkmtcgat.txt	BLAD_BLCA
 breastrsemfpkmgtex.txt	brcarsemfpkmtcgat.txt	BREA_BRCA
@@ -26,30 +26,29 @@ uterusrsemfpkmgtex.txt	ucsrsemfpkmtcgat.txt	UTER_UCSR
 stomachrsemfpkmgtex.txt	stadrsemfpkmtcgat.txt	STOM_STAD
 ```
 
-#Merge GEMs from Wang et al
-
+## Merge GEMs from Wang et al
 ```
-python mergegem.py bladderrsemfpkmgtex.txt blcarsemfpkmtcgat.txt BLAD_BLCA.txt
-python mergegem.py breastrsemfpkmgtex.txt brcarsemfpkmtcgat.txt BREA_BRCA.txt
-python mergegem.py cervixrsemfpkmgtex.txt cescrsemfpkmtcgat.txt CERV_CESC.txt
-python mergegem.py colonrsemfpkmgtex.txt coadrsemfpkmtcgat.txt COLO_COAD.txt
-python mergegem.py esophagus_gasrsemfpkmgtex.txt escarsemfpkmtcgat.txt GASR_ESCA.txt
-python mergegem.py esophagus_mucrsemfpkmgtex.txt escarsemfpkmtcgat.txt MUCR_ESCA.txt
-python mergegem.py esophagus_musrsemfpkmgtex.txt escarsemfpkmtcgat.txt MUSR_ESCA.txt
-python mergegem.py kidneyrsemfpkmgtex.txt kircrsemfpkmtcgat.txt KIDN_KIRC.txt
-python mergegem.py kidneyrsemfpkmgtex.txt kirprsemfpkmtcgat.txt KIDN_KIRP.txt
-python mergegem.py kidneyrsemfpkmgtex.txt kichrsemfpkmtcgat.txt KIDN_KICH.txt
-python mergegem.py liverrsemfpkmgtex.txt lihcrsemfpkmtcgat.txt LIVE_LIHC.txt
-python mergegem.py lungrsemfpkmgtex.txt luadrsemfpkmtcgat.txt LUNG_LUAD.txt
-python mergegem.py lungrsemfpkmgtex.txt luscrsemfpkmtcgat.txt LUNG_LUSC.txt
-python mergegem.py prostatersemfpkmgtex.txt pradrsemfpkmtcgat.txt PROS_PRAD.txt
-python mergegem.py thyroidrsemfpkmgtex.txt thcarsemfpkmtcgat.txt THYR_THCR.txt
-python mergegem.py uterusrsemfpkmgtex.txt ucecrsemfpkmtcgat.txt UTER_UCEC.txt
-python mergegem.py uterusrsemfpkmgtex.txt ucsrsemfpkmtcgat.txt UTER_UCSR.txt
-python mergegem.py stomachrsemfpkmgtex.txt stadrsemfpkmtcgat.txt STOM_STAD.txt
+python gem_merge.py bladderrsemfpkmgtex.txt blcarsemfpkmtcgat.txt BLAD_BLCA.txt
+python gem_merge.py breastrsemfpkmgtex.txt brcarsemfpkmtcgat.txt BREA_BRCA.txt
+python gem_merge.py cervixrsemfpkmgtex.txt cescrsemfpkmtcgat.txt CERV_CESC.txt
+python gem_merge.py colonrsemfpkmgtex.txt coadrsemfpkmtcgat.txt COLO_COAD.txt
+python gem_merge.py esophagus_gasrsemfpkmgtex.txt escarsemfpkmtcgat.txt GASR_ESCA.txt
+python gem_merge.py esophagus_mucrsemfpkmgtex.txt escarsemfpkmtcgat.txt MUCR_ESCA.txt
+python gem_merge.py esophagus_musrsemfpkmgtex.txt escarsemfpkmtcgat.txt MUSR_ESCA.txt
+python gem_merge.py kidneyrsemfpkmgtex.txt kircrsemfpkmtcgat.txt KIDN_KIRC.txt
+python gem_merge.py kidneyrsemfpkmgtex.txt kirprsemfpkmtcgat.txt KIDN_KIRP.txt
+python gem_merge.py kidneyrsemfpkmgtex.txt kichrsemfpkmtcgat.txt KIDN_KICH.txt
+python gem_merge.py liverrsemfpkmgtex.txt lihcrsemfpkmtcgat.txt LIVE_LIHC.txt
+python gem_merge.py lungrsemfpkmgtex.txt luadrsemfpkmtcgat.txt LUNG_LUAD.txt
+python gem_merge.py lungrsemfpkmgtex.txt luscrsemfpkmtcgat.txt LUNG_LUSC.txt
+python gem_merge.py prostatersemfpkmgtex.txt pradrsemfpkmtcgat.txt PROS_PRAD.txt
+python gem_merge.py thyroidrsemfpkmgtex.txt thcarsemfpkmtcgat.txt THYR_THCR.txt
+python gem_merge.py uterusrsemfpkmgtex.txt ucecrsemfpkmtcgat.txt UTER_UCEC.txt
+python gem_merge.py uterusrsemfpkmgtex.txt ucsrsemfpkmtcgat.txt UTER_UCSR.txt
+python gem_merge.py stomachrsemfpkmgtex.txt stadrsemfpkmtcgat.txt STOM_STAD.txt
 ```
 
-#Transpose the GEMs
+## Transpose the GEMs
 ```
 bash transpose.sh BLAD_BLCA.txt > BLAD_BLCA_transpose.txt
 bash transpose.sh BREA_BRCA.txt > BREA_BRCA_transpose.txt
