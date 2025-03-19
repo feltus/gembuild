@@ -8,7 +8,7 @@ import argparse
 import os
 
 def parse_arguments():
-    parser = argpaarse.ArgumentParser(description='Generate histogram of gene expression values for specific genes')
+    parser = argparse.ArgumentParser(description='Generate histogram of gene expression values for specific genes')
     parser.add_argument('--expression_file', '-e', required=True, help='Gene expression matrix file path')
     parser.add_argument('--gene_list_file', '-g', required=True, help='File containing genes of interest')
     parser.add_argument('--output', '-o', default='gene_expression_histogram.png', help='Output histogram file path')
