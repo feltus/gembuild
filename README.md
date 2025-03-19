@@ -4,47 +4,76 @@
 https://figshare.com/articles/dataset/Data_record_3/5330593
 
 ## Here is a subset of Normal-GTEX and Tumor-TCGA GEM files and the merged label.: Normal-GTEX and Tumor-TCGA (TCGA normal is not included).
-```
-bladderrsemfpkmgtex.txt	blcarsemfpkmtcgat.txt	BLAD_BLCA
-breastrsemfpkmgtex.txt	brcarsemfpkmtcgat.txt	BREA_BRCA
-cervixrsemfpkmgtex.txt	cescrsemfpkmtcgat.txt	CERV_CESC
-colonrsemfpkmgtex.txt	coadrsemfpkmtcgat.txt	COLO_COAD
-esophagus_gasrsemfpkmgtex.txt	escarsemfpkmtcgat.txt	GASR_ESCA
-esophagus_mucrsemfpkmgtex.txt	escarsemfpkmtcgat.txt	MUCR_ESCA
-esophagus_musrsemfpkmgtex.txt	escarsemfpkmtcgat.txt	MUSR_ESCA
-kidneyrsemfpkmgtex.txt	kircrsemfpkmtcgat.txt	KIDN_KIRC
-kidneyrsemfpkmgtex.txt	kirprsemfpkmtcgat.txt	KIDN_KIRP
-kidneyrsemfpkmgtex.txt	kichrsemfpkmtcgat.txt	KIDN_KICH
-liverrsemfpkmgtex.txt	lihcrsemfpkmtcgat.txt	LIVE_LIHC
-lungrsemfpkmgtex.txt	luadrsemfpkmtcgat.txt	LUNG_LUAD
-lungrsemfpkmgtex.txt	luscrsemfpkmtcgat.txt	LUNG_LUSC
-prostatersemfpkmgtex.txt	pradrsemfpkmtcgat.txt	PROS_PRAD
-thyroidrsemfpkmgtex.txt	thcarsemfpkmtcgat.txt	THYR_THCR
-uterusrsemfpkmgtex.txt	ucecrsemfpkmtcgat.txt	UTER_UCEC
-uterusrsemfpkmgtex.txt	ucsrsemfpkmtcgat.txt	UTER_UCSR
-stomachrsemfpkmgtex.txt	stadrsemfpkmtcgat.txt	STOM_STAD
+bladder-rsem-fpkm-gtex.txt	BLADN
+blca-rsem-fpkm-tcga-t.txt	BLCAT
+blca-rsem-fpkm-tcga.txt	BLCAN
+brca-rsem-fpkm-tcga-t.txt	BRCAT
+brca-rsem-fpkm-tcga.txt	BRCAN
+breast-rsem-fpkm-gtex.txt	BREAN
+cervix-rsem-fpkm-gtex.txt	CERVN
+cesc-rsem-fpkm-tcga-t.txt	CESCT
+cesc-rsem-fpkm-tcga.txt	CESCN
+chol-rsem-fpkm-tcga-t.txt	CHOLT
+chol-rsem-fpkm-tcga.txt	CHOLN
+coad-rsem-fpkm-tcga-t.txt	COADT
+coad-rsem-fpkm-tcga.txt	COADN
+colon-rsem-fpkm-gtex.txt	COLON
+esca-rsem-fpkm-tcga-t.txt	ESCAT
+esca-rsem-fpkm-tcga.txt	ESCAN
+esophagus_gas-rsem-fpkm-gtex.txt	ESOGN
+esophagus_muc-rsem-fpkm-gtex.txt	ESOCN
+esophagus_mus-rsem-fpkm-gtex.txt	ESOSN
+hnsc-rsem-fpkm-tcga-t.txt	HNSCT
+hnsc-rsem-fpkm-tcga.txt	HNSCN
+kich-rsem-fpkm-tcga-t.txt	KICHT
+kich-rsem-fpkm-tcga.txt	KICHN
+kidney-rsem-fpkm-gtex.txt	KIDNN
+kirc-rsem-fpkm-tcga-t.txt	KIRCT
+kirc-rsem-fpkm-tcga.txt	KIRCN
+kirp-rsem-fpkm-tcga-t.txt	KIRPT
+kirp-rsem-fpkm-tcga.txt	KIRPN
+lihc-rsem-fpkm-tcga-t.txt	LIHCT
+lihc-rsem-fpkm-tcga.txt	LIHCN
+liver-rsem-fpkm-gtex.txt	LIVEN
+luad-rsem-fpkm-tcga-t.txt	LUADT
+luad-rsem-fpkm-tcga.txt	LUADN
+lung-rsem-fpkm-gtex.txt	LUNGN
+lusc-rsem-fpkm-tcga-t.txt	LUSCT
+lusc-rsem-fpkm-tcga.txt	LUSCN
+prad-rsem-fpkm-tcga-t.txt	PRADT
+prad-rsem-fpkm-tcga.txt	PRADN
+prostate-rsem-fpkm-gtex.txt	PROSN
+read-rsem-fpkm-tcga-t.txt	READT
+read-rsem-fpkm-tcga.txt	READN
+salivary-rsem-fpkm-gtex.txt	SALIN
+stad-rsem-fpkm-tcga-t.txt	STADT
+stad-rsem-fpkm-tcga.txt	STADN
+stomach-rsem-fpkm-gtex.txt	STOMN
+thca-rsem-fpkm-tcga-t.txt	THCAT
+thca-rsem-fpkm-tcga.txt	THCAN
+thyroid-rsem-fpkm-gtex.txt	THYRN
+ucec-rsem-fpkm-tcga-t.txt	UCECT
+ucec-rsem-fpkm-tcga.txt	UCECN
+ucs-rsem-fpkm-tcga-t.txt	UCST
+uterus-rsem-fpkm-gtex.txt	UTERN
 ```
 
 ## Merge GEMs from Wang et al
 ```
-python gem_merge.py bladderrsemfpkmgtex.txt blcarsemfpkmtcgat.txt BLAD_BLCA.txt
-python gem_merge.py breastrsemfpkmgtex.txt brcarsemfpkmtcgat.txt BREA_BRCA.txt
-python gem_merge.py cervixrsemfpkmgtex.txt cescrsemfpkmtcgat.txt CERV_CESC.txt
-python gem_merge.py colonrsemfpkmgtex.txt coadrsemfpkmtcgat.txt COLO_COAD.txt
-python gem_merge.py esophagus_gasrsemfpkmgtex.txt escarsemfpkmtcgat.txt GASR_ESCA.txt
-python gem_merge.py esophagus_mucrsemfpkmgtex.txt escarsemfpkmtcgat.txt MUCR_ESCA.txt
-python gem_merge.py esophagus_musrsemfpkmgtex.txt escarsemfpkmtcgat.txt MUSR_ESCA.txt
-python gem_merge.py kidneyrsemfpkmgtex.txt kircrsemfpkmtcgat.txt KIDN_KIRC.txt
-python gem_merge.py kidneyrsemfpkmgtex.txt kirprsemfpkmtcgat.txt KIDN_KIRP.txt
-python gem_merge.py kidneyrsemfpkmgtex.txt kichrsemfpkmtcgat.txt KIDN_KICH.txt
-python gem_merge.py liverrsemfpkmgtex.txt lihcrsemfpkmtcgat.txt LIVE_LIHC.txt
-python gem_merge.py lungrsemfpkmgtex.txt luadrsemfpkmtcgat.txt LUNG_LUAD.txt
-python gem_merge.py lungrsemfpkmgtex.txt luscrsemfpkmtcgat.txt LUNG_LUSC.txt
-python gem_merge.py prostatersemfpkmgtex.txt pradrsemfpkmtcgat.txt PROS_PRAD.txt
-python gem_merge.py thyroidrsemfpkmgtex.txt thcarsemfpkmtcgat.txt THYR_THCR.txt
-python gem_merge.py uterusrsemfpkmgtex.txt ucecrsemfpkmtcgat.txt UTER_UCEC.txt
-python gem_merge.py uterusrsemfpkmgtex.txt ucsrsemfpkmtcgat.txt UTER_UCSR.txt
-python gem_merge.py stomachrsemfpkmgtex.txt stadrsemfpkmtcgat.txt STOM_STAD.txt
+python gem_merge.py bladder-rsem-fpkm-gtex.txt blca-rsem-fpkm-tcga-t.txt BLADN_BLCAT.txt
+python gem_merge.py breast-rsem-fpkm-gtex.txt brca-rsem-fpkm-tcga-t.txt BREAN_BRCAT.txt
+python gem_merge.py cervix-rsem-fpkm-gtex.txt cesc-rsem-fpkm-tcga-t.txt CERVN_CESCT.txt
+python gem_merge.py colon-rsem-fpkm-gtex.txt coad-rsem-fpkm-tcga-t.txt COLON_COADT.txt
+python gem_merge.py esophagus_gas-rsem-fpkm-gtex.txt esca-rsem-fpkm-tcga-t.txt ESOGN_ESCAT.txt
+python gem_merge.py kidney-rsem-fpkm-gtex.txt kirc-rsem-fpkm-tcga-t.txt KIDNN_KIRCT.txt
+python gem_merge.py kidney-rsem-fpkm-gtex.txt kirp-rsem-fpkm-tcga-t.txt KIDNN_KIRPT.txt
+python gem_merge.py liver-rsem-fpkm-gtex.txt lihc-rsem-fpkm-tcga-t.txt LIVEN_LIHCT.txt
+python gem_merge.py prostate-rsem-fpkm-gtex.txt prad-rsem-fpkm-tcga-t.txt PROSN_PRADT.txt
+python gem_merge.py stomach-rsem-fpkm-gtex.txt stad-rsem-fpkm-tcga-t.txt STOMN_STADT.txt
+python gem_merge.py thyroid-rsem-fpkm-gtex.txt thca-rsem-fpkm-tcga-t.txt THYRN_THCAT.txt
+python gem_merge.py lung-rsem-fpkm-gtex.txt luad-rsem-fpkm-tcga-t.txt LUNGN_LUADT.txt
+python gem_merge.py lung-rsem-fpkm-gtex.txt lusc-rsem-fpkm-tcga-t.txt LUNGN_LUSCT.txt
+python gem_merge.py uterus-rsem-fpkm-gtex.txt ucec-rsem-fpkm-tcga-t.txt UTERN_UCECT.txt
 ```
 
 ## Transpose the GEMs
