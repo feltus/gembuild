@@ -1,10 +1,10 @@
-# This Workflow will prepare a series of normal (GTEX) and tunor (TCGA) co-normalized gene expression matrices from Wang et al GEMs (https://pubmed.ncbi.nlm.nih.gov/29664468/).  GEMs will be mixed and separated into train and test GEMs for AI/ML applications.
+# This Workflow will prepare a series of normal (GTEX) and tunor (TCGA) co-normalized gene expression matrices (GEMs) from Wang et al (https://pubmed.ncbi.nlm.nih.gov/29664468/).  GEMs will be mixed and separated into train and test GEMs for AI/ML applications.
 
 ## Download GEMs
 https://figshare.com/articles/dataset/Data_record_3/5330593
 
-## Here is a subset of GEMS: Normal-GTEX and Tumor-TCGA (TCGA normal is not included).
-GEMA	GEMB	GEM_MERGE
+## Here is a subset of Normal-GTEX and Tumor-TCGA GEM files and the merged label.: Normal-GTEX and Tumor-TCGA (TCGA normal is not included).
+```
 bladderrsemfpkmgtex.txt	blcarsemfpkmtcgat.txt	BLAD_BLCA
 breastrsemfpkmgtex.txt	brcarsemfpkmtcgat.txt	BREA_BRCA
 cervixrsemfpkmgtex.txt	cescrsemfpkmtcgat.txt	CERV_CESC
@@ -23,6 +23,7 @@ thyroidrsemfpkmgtex.txt	thcarsemfpkmtcgat.txt	THYR_THCR
 uterusrsemfpkmgtex.txt	ucecrsemfpkmtcgat.txt	UTER_UCEC
 uterusrsemfpkmgtex.txt	ucsrsemfpkmtcgat.txt	UTER_UCSR
 stomachrsemfpkmgtex.txt	stadrsemfpkmtcgat.txt	STOM_STAD
+```
 
 ## Merge GEMs from Wang et al
 ```
