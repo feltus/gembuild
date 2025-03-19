@@ -134,20 +134,20 @@ cat UTERN_UCECT_train.txt | awk '{$1=$1}1' OFS='\t'  > UTERN_UCECT.train; cat UT
 
 ## Make  group label files (e.g. TUMOR, NORMAL)
 ```
-bash gembuild/make_labels.sh BLADN_BLCAT.train; bash gembuild/make_labels.sh BLADN_BLCAT.test"
-bash gembuild/make_labels.sh BREAN_BRCAT.train; bash gembuild/make_labels.sh BREAN_BRCAT.test"
-bash gembuild/make_labels.sh CERVN_CESCT.train; bash gembuild/make_labels.sh CERVN_CESCT.test"
-bash gembuild/make_labels.sh COLON_COADT.train; bash gembuild/make_labels.sh COLON_COADT.test"
-bash gembuild/make_labels.sh ESOGN_ESCAT.train; bash gembuild/make_labels.sh ESOGN_ESCAT.test"
-bash gembuild/make_labels.sh KIDNN_KIRCT.train; bash gembuild/make_labels.sh KIDNN_KIRCT.test"
-bash gembuild/make_labels.sh KIDNN_KIRPT.train; bash gembuild/make_labels.sh KIDNN_KIRPT.test"
-bash gembuild/make_labels.sh LIVEN_LIHCT.train; bash gembuild/make_labels.sh LIVEN_LIHCT.test"
-bash gembuild/make_labels.sh PROSN_PRADT.train; bash gembuild/make_labels.sh PROSN_PRADT.test"
-bash gembuild/make_labels.sh STOMN_STADT.train; bash gembuild/make_labels.sh STOMN_STADT.test"
-bash gembuild/make_labels.sh THYRN_THCAT.train; bash gembuild/make_labels.sh THYRN_THCAT.test"
-bash gembuild/make_labels.sh LUNGN_LUADT.train; bash gembuild/make_labels.sh LUNGN_LUADT.test"
-bash gembuild/make_labels.sh LUNGN_LUSCT.train; bash gembuild/make_labels.sh LUNGN_LUSCT.test"
-bash gembuild/make_labels.sh UTERN_UCECT.train; bash gembuild/make_labels.sh UTERN_UCECT.test"
+bash gembuild/make_labels.sh BLADN_BLCAT.train; bash gembuild/make_labels.sh BLADN_BLCAT.test
+bash gembuild/make_labels.sh BREAN_BRCAT.train; bash gembuild/make_labels.sh BREAN_BRCAT.test
+bash gembuild/make_labels.sh CERVN_CESCT.train; bash gembuild/make_labels.sh CERVN_CESCT.test
+bash gembuild/make_labels.sh COLON_COADT.train; bash gembuild/make_labels.sh COLON_COADT.test
+bash gembuild/make_labels.sh ESOGN_ESCAT.train; bash gembuild/make_labels.sh ESOGN_ESCAT.test
+bash gembuild/make_labels.sh KIDNN_KIRCT.train; bash gembuild/make_labels.sh KIDNN_KIRCT.test
+bash gembuild/make_labels.sh KIDNN_KIRPT.train; bash gembuild/make_labels.sh KIDNN_KIRPT.test
+bash gembuild/make_labels.sh LIVEN_LIHCT.train; bash gembuild/make_labels.sh LIVEN_LIHCT.test
+bash gembuild/make_labels.sh PROSN_PRADT.train; bash gembuild/make_labels.sh PROSN_PRADT.test
+bash gembuild/make_labels.sh STOMN_STADT.train; bash gembuild/make_labels.sh STOMN_STADT.test
+bash gembuild/make_labels.sh THYRN_THCAT.train; bash gembuild/make_labels.sh THYRN_THCAT.test
+bash gembuild/make_labels.sh LUNGN_LUADT.train; bash gembuild/make_labels.sh LUNGN_LUADT.test
+bash gembuild/make_labels.sh LUNGN_LUSCT.train; bash gembuild/make_labels.sh LUNGN_LUSCT.test
+bash gembuild/make_labels.sh UTERN_UCECT.train; bash gembuild/make_labels.sh UTERN_UCECT.test
 ```
 
 ## Draw a histogram of all GEMs
