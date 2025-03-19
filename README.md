@@ -50,24 +50,24 @@ python gem_merge.py stomachrsemfpkmgtex.txt stadrsemfpkmtcgat.txt STOM_STAD.txt
 
 ## Transpose the GEMs
 ```
-bash transpose.sh BLAD_BLCA.txt > BLAD_BLCA_transpose.txt
-bash transpose.sh BREA_BRCA.txt > BREA_BRCA_transpose.txt
-bash transpose.sh CERV_CESC.txt > CERV_CESC_transpose.txt
-bash transpose.sh COLO_COAD.txt > COLO_COAD_transpose.txt
-bash transpose.sh GASR_ESCA.txt > GASR_ESCA_transpose.txt
-bash transpose.sh MUCR_ESCA.txt > MUCR_ESCA_transpose.txt
-bash transpose.sh MUSR_ESCA.txt > MUSR_ESCA_transpose.txt
-bash transpose.sh KIDN_KIRC.txt > KIDN_KIRC_transpose.txt
-bash transpose.sh KIDN_KIRP.txt > KIDN_KIRP_transpose.txt
-bash transpose.sh KIDN_KICH.txt > KIDN_KICH_transpose.txt
-bash transpose.sh LIVE_LIHC.txt > LIVE_LIHC_transpose.txt
-bash transpose.sh LUNG_LUAD.txt > LUNG_LUAD_transpose.txt
-bash transpose.sh LUNG_LUSC.txt > LUNG_LUSC_transpose.txt
-bash transpose.sh PROS_PRAD.txt > PROS_PRAD_transpose.txt
-bash transpose.sh THYR_THCR.txt > THYR_THCR_transpose.txt
-bash transpose.sh UTER_UCEC.txt > UTER_UCEC_transpose.txt
-bash transpose.sh UTER_UCSR.txt > UTER_UCSR_transpose.txt
-bash transpose.sh STOM_STAD.txt > STOM_STAD_transpose.txt
+bash transpose_gem.sh BLAD_BLCA.txt > BLAD_BLCA_transpose.txt
+bash transpose_gem.sh BREA_BRCA.txt > BREA_BRCA_transpose.txt
+bash transpose_gem.sh CERV_CESC.txt > CERV_CESC_transpose.txt
+bash transpose_gem.sh COLO_COAD.txt > COLO_COAD_transpose.txt
+bash transpose_gem.sh GASR_ESCA.txt > GASR_ESCA_transpose.txt
+bash transpose_gem.sh MUCR_ESCA.txt > MUCR_ESCA_transpose.txt
+bash transpose_gem.sh MUSR_ESCA.txt > MUSR_ESCA_transpose.txt
+bash transpose_gem.sh KIDN_KIRC.txt > KIDN_KIRC_transpose.txt
+bash transpose_gem.sh KIDN_KIRP.txt > KIDN_KIRP_transpose.txt
+bash transpose_gem.sh KIDN_KICH.txt > KIDN_KICH_transpose.txt
+bash transpose_gem.sh LIVE_LIHC.txt > LIVE_LIHC_transpose.txt
+bash transpose_gem.sh LUNG_LUAD.txt > LUNG_LUAD_transpose.txt
+bash transpose_gem.sh LUNG_LUSC.txt > LUNG_LUSC_transpose.txt
+bash transpose_gem.sh PROS_PRAD.txt > PROS_PRAD_transpose.txt
+bash transpose_gem.sh THYR_THCR.txt > THYR_THCR_transpose.txt
+bash transpose_gem.sh UTER_UCEC.txt > UTER_UCEC_transpose.txt
+bash transpose_gem.sh UTER_UCSR.txt > UTER_UCSR_transpose.txt
+bash transpose_gem.sh STOM_STAD.txt > STOM_STAD_transpose.txt
 ```
 
 #Split GEMs into test and train sets
