@@ -60,6 +60,7 @@ uterus-rsem-fpkm-gtex.txt	UTERN
 ```
 
 ## Merge GEMs from Wang et al
+Note: geme_merge.py drops the second Entrez_Gene_Id column which is an integer and looks like a gene expression value.
 ```
 python gembuild/gem_merge.py bladder-rsem-fpkm-gtex.txt blca-rsem-fpkm-tcga-t.txt BLADN_BLCAT.txt
 python gembuild/gem_merge.py breast-rsem-fpkm-gtex.txt brca-rsem-fpkm-tcga-t.txt BREAN_BRCAT.txt
