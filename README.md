@@ -1,5 +1,6 @@
+# Computation Practice:  Build Normal and Tumor Gene Expression Matrices (GEMs)
 # Background
-This Workflow will prepare a series of normal (GTEX) and tunor (TCGA) co-normalized gene expression matrices (GEMs) from Wang et al (https://pubmed.ncbi.nlm.nih.gov/29664468/).  GEMs will be mixed and separated into train and test GEMs for AI/ML applications.
+This Workflow will prepare a series of normal (GTEX) and tumor (TCGA) co-normalized gene expression matrices (GEMs) from Wang et al (https://pubmed.ncbi.nlm.nih.gov/29664468/).  GEMs will be mixed and separated into train and test GEMs for AI/ML applications.
 
 ## Download GEMs
 https://figshare.com/articles/dataset/Data_record_3/5330593
