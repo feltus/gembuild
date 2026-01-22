@@ -160,7 +160,7 @@ for i in *.test; do for k in *.txt; do python GEM_histogram.py -e $i -g $k -o $i
 ```
 
 ##########################################
-###Install codex
+## Install codex
 Codex CLI is a Node.js tool, so you first need Node and npm installed locally. You can install Node via nvm in your home directory. Run: 
 
 ```
@@ -239,7 +239,12 @@ You'll also need to add an API key from Doug's proxy server (https://llm.rcd.cle
 export PALMETTO_LLM_API_KEY=[$(cat ~/.codex/biollm.key)]
 ```
 
-###Log into OpenAI so you can access OpenAI API
+## Log into OpenAI so you can access OpenAI API
+
+Open a Palmetto Desktop node using OnDemand: https://ondemand.rcd.clemson.edu/
+
+Open a terminal and run this code:
+
 ```
 codex login --device-auth
 ```
@@ -252,7 +257,6 @@ Follow these steps to sign in with ChatGPT using device code authorization:
 2. Enter this one-time code (expires in 15 minutes)
    XXXX-XXXX
 
-Device codes are a common phishing target. Never share this code.
 
 
 
